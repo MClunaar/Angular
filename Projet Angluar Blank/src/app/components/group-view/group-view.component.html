@@ -1,0 +1,12 @@
+<div class="messages">
+    <p>
+        <i>{{ message.sender.uid }}</i> <br />
+        {{ message.text }}
+    </p>
+</div>
+<div class="messageInput">
+    <input type="text" placeholder="enter a text message" #messageText />
+    <button (click)="sendMessage(messageText.value); messageText.value = ''">
+        Send
+    </button>
+</div>
